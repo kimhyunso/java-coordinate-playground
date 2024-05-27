@@ -1,4 +1,4 @@
-package fuel.domain.concreate;
+package fuel;
 
 import fuel.domain.Car;
 
