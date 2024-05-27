@@ -1,9 +1,8 @@
 package fuel;
 
-import fuel.domain.RentCompany;
-import fuel.domain.concreate.Avante;
-import fuel.domain.concreate.K5;
-import fuel.domain.concreate.Sonata;
+import fuel.domain.Avante;
+import fuel.domain.K5;
+import fuel.domain.Sonata;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;

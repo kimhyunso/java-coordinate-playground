@@ -1,6 +1,6 @@
-package fuel.domain.concreate;
+package fuel.domain;
 
-import fuel.domain.Car;
+import fuel.Car;
 
 public class Avante extends Car {
     private final int tripDistance;

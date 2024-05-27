@@ -1,6 +1,6 @@
-package fuel;
+package fuel.domain;
 
-import fuel.domain.Car;
+import fuel.Car;
 
 public class Sonata extends Car {
     private final int tripDistance;

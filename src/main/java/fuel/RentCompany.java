@@ -1,4 +1,4 @@
-package fuel.domain;
+package fuel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +19,7 @@ public class RentCompany {
     public String generateReport() {
         return carList.stream()
                 .map(this::stringFormat)
-                .collect(Collectors.joining("\n"));
+                .collect(Collectors.joining(NEWLINE));
     }
 
     private String  stringFormat(Car car) {
