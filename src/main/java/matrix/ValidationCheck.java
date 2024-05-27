@@ -8,9 +8,10 @@ public class ValidationCheck {
 
     public static final String REGEX = "[,()-]";
 
-    public List<String> removeSymbols(String matrixPosition) {
+    public List<Integer> filterAndMap(String matrixPosition) {
         return Arrays.stream(matrixPosition.split(REGEX))
                 .filter(this::isNotEmpty)
+                .map(Integer::parseInt)
                 .collect(Collectors.toList());
     }
 
