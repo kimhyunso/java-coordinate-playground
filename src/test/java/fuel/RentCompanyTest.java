@@ -1,5 +1,6 @@
 package fuel;
 
+import fuel.domain.RentCompany;
 import fuel.domain.concreate.Avante;
 import fuel.domain.concreate.K5;
 import fuel.domain.concreate.Sonata;
@@ -25,7 +26,7 @@ public class RentCompanyTest {
                         "K5 : 20리터" + NEWLINE +
                         "Sonata : 12리터" + NEWLINE +
                         "Avante : 20리터" + NEWLINE +
-                        "K5 : 30리터" + NEWLINE
+                        "K5 : 30리터"
         );
     }
 
