@@ -1,16 +1,14 @@
 package matrix;
 
+import matrix.domain.Point;
+import matrix.domain.PointA;
+import matrix.domain.PointB;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import javax.print.PrintException;
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MatrixTest {
     @Test
@@ -25,6 +23,14 @@ public class MatrixTest {
     void 초과시_에러(){
         String message = Assertions.assertThrows(IllegalArgumentException.class, ()-> new PointA(25, 10)).getMessage();
         assertThat(message).isEqualTo("24초과입니다. 다시 입력해주세요");
+    }
+
+    @Test
+    @DisplayName("포인트 두 점 사이의 거리를 계산한다")
+    void 두_점_사이의거리계산(){
+        Point point = new Point(new PointA(10, 10), new PointB( 14, 15));
+        double distance = point.pointDistance();
+        assertEquals(distance, 6.403124, 0.000001);
     }
 
 }
