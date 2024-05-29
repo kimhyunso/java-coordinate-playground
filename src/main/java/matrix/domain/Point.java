@@ -9,7 +9,6 @@ public class Point {
         this.pointB = pointB;
     }
 
-    // 제곱근((A.x - B.x)^제곱 + (A.y - B.y)^제곱)
     public double pointDistance() {
         int x1 = pointA.getX();
         int y1 = pointA.getY();

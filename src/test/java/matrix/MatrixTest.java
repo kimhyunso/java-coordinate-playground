@@ -17,20 +17,16 @@ public class MatrixTest {
         assertThat(new PointA(10, 10)).hasToString("10 10");
         assertThat(new PointB( 14, 15)).hasToString("14 15");
     }
-
     @Test
     @DisplayName("x, y 24초과이면 에러발생")
     void 초과시_에러(){
         String message = Assertions.assertThrows(IllegalArgumentException.class, ()-> new PointA(25, 10)).getMessage();
         assertThat(message).isEqualTo("24초과입니다. 다시 입력해주세요");
     }
-
     @Test
     @DisplayName("포인트 두 점 사이의 거리를 계산한다")
     void 두_점_사이의거리계산(){
         Point point = new Point(new PointA(10, 10), new PointB( 14, 15));
-        double distance = point.pointDistance();
-        assertEquals(distance, 6.403124, 0.000001);
+        assertEquals(point.pointDistance(), 6.403124, 0.000001);
     }
-
 }
