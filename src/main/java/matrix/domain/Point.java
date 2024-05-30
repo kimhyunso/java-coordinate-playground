@@ -1,21 +1,19 @@
 package matrix.domain;
-
 public class Point {
-    private final PointA pointA;
-    private final PointB pointB;
-
-    public Point(PointA pointA, PointB pointB) {
-        this.pointA = pointA;
-        this.pointB = pointB;
+    public static final int MAX_NO = 24;
+    protected final int x;
+    protected final int y;
+    public Point(int x, int y) {
+        if (x > MAX_NO || y > MAX_NO){
+            throw new IllegalArgumentException("x, y 둘 중 하나의 값이 24를 초과했습니다.");
+        }
+        this.x = x;
+        this.y = y;
     }
-
-    public double pointDistance() {
-        int x1 = pointA.getX();
-        int y1 = pointA.getY();
-
-        int x2 = pointB.getX();
-        int y2 = pointB.getY();
-
-        return Math.sqrt(Math.pow((x1 - x2), 2) + Math.pow((y1 - y2), 2));
+    public double pointDistance(Point point){
+        return Math.sqrt(pow(this.x, point.x) + pow(this.y, point.y));
+    }
+    private double pow(int self, int point) {
+        return Math.pow(self - point, 2);
     }
 }
