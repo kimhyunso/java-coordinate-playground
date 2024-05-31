@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class InputView {
 
-    public static final int MAX_NO = 25;
+    public static final int MAX_NO = 24;
     private String matrix[][] = new String[MAX_NO][MAX_NO];
 
     public List<Integer> inputMatrix(){
@@ -23,10 +23,35 @@ public class InputView {
         matrix = pointA.getMatrix(pointB);
 
         for (int i = matrix.length-1; i >= 0; i--){
+            if (isEven(i)){
+                System.out.printf("%02d", i);
+            }
+            System.out.print("|");
             for (int j = 0; j < matrix[0].length; j++){
                 System.out.print(matrix[i][j]);
             }
             System.out.println();
+        }
+
+
+        printFooter();
+        System.out.println();
+    }
+
+    private boolean isEven(int number) {
+        return number % 2 == 0;
+    }
+
+    private void printFooter() {
+        for (int i = 0; i < MAX_NO; i++) {
+            System.out.print("-");
+        }
+
+        System.out.println();
+
+        for (int i = 0; i < MAX_NO; i++) {
+            if (isEven(i))
+                System.out.printf("%2d", i);
         }
     }
 }
