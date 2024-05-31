@@ -10,7 +10,10 @@ public class Point {
         this.x = x;
         this.y = y;
     }
-    public double pointDistance(Point point){
+
+
+
+    public double getDistance(Point point){
         return Math.sqrt(pow(this.x, point.x) + pow(this.y, point.y));
     }
     private double pow(int self, int point) {

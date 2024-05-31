@@ -26,6 +26,6 @@ public class MatrixTest {
         Point pointA = new Point(10, 10);
         Point pointB = new Point(14, 15);
 
-        assertEquals(pointA.pointDistance(pointB), 6.403124, 0.000001);
+        assertEquals(pointA.getDistance(pointB), 6.403124, 0.000001);
     }
 }

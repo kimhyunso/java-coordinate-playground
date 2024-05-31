@@ -2,17 +2,22 @@ package matrix.validation;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-public class ValidationCheck {
+public class Utils {
     public static final String REGEX = "[,()-]";
-    public List<Integer> filterParseIntegers(String matrixPosition) {
+    public static List<Integer> filterParseIntegers(String matrixPosition) {
         return Arrays.stream(matrixPosition.split(REGEX))
-                .filter(this::isNotEmpty)
+                .filter(Utils::isNotEmpty)
                 .map(Integer::parseInt)
                 .collect(Collectors.toList());
     }
-    private boolean isNotEmpty(String position) {
+    private static boolean isNotEmpty(String position) {
         return !position.isEmpty();
+    }
+
+    public static boolean containAlphabet(String word) {
+        return word.matches(".*[a-zA-Z].*");
     }
 }
