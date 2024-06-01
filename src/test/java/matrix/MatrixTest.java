@@ -21,7 +21,7 @@ public class MatrixTest {
     }
 
     @Test
-    @DisplayName("x, y 24초과이면 에러발생")
+    @DisplayName("입력값 중 하나라도 24초과라면 에러발생")
     void 초과시_에러(){
         String message = Assertions.assertThrows(IllegalArgumentException.class, ()-> new PointA(25, 10)).getMessage();
         assertThat(message).isEqualTo("24초과입니다. 다시 입력해주세요");
