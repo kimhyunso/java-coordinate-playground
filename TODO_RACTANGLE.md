@@ -15,7 +15,7 @@ Point라는 객체를 추가해 x, y 좌표를 관리하도록 한다.
 2. Rectangle 클래스에 의존성 주입하기
 ## 첫번째 포인트와 두번째 포인트가 width가 됨 또는 세번째 포인트와 네번째 포인트가 width가 됨
 ## 두번째 포인트와 세번째 포인트가 height가 됨 또는 두번째 포인트와 세번째 포인트가 height가 됨
-## Rectangle([Point(x, y), Point(x, y), Point(x, y), Point(x, y)]) 
+## Rectangle([Point(x, y), Point(x, y), Point(x, y), Point(x, y)])
 
 2. 네 점이 뒤틀어진 사다리꼴이나 마름모는 제외하고 직사각형(정사각형 포함)만 허용하도록 검사한다.
 ## Rectangle([Point(x, y), Point(x, y), Point(x, y), Point(x, y)])
