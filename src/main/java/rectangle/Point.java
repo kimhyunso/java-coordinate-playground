@@ -23,4 +23,12 @@ public class Point {
     public int hashCode() {
         return Objects.hash(x, y);
     }
+
+    public int width(Point pointB) {
+        return Math.abs(this.x - pointB.x);
+    }
+
+    public int height(Point pointB) {
+        return Math.abs(this.y - pointB.y);
+    }
 }

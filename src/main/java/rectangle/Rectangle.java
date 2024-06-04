@@ -19,7 +19,6 @@ public class Rectangle{
         }
     }
 
-
     @Override
     public String toString() {
         return points.toString();
