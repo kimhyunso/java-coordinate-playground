@@ -1,13 +1,10 @@
 package rectangle;
 
 import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class Utils {
-
     public static final String REGEX = "[(|,|)|-]";
 
     public static List<Integer> split(String input) {
@@ -17,7 +14,6 @@ public class Utils {
                 .boxed()
                 .collect(Collectors.toList());
     }
-
     private static boolean isNotEmpty(String input){
         return !input.isEmpty();
     }

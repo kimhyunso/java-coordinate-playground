@@ -11,6 +11,14 @@ public class Point {
         this.y = y;
     }
 
+    public int width(Point targetPoint) {
+        return Math.abs(this.x - targetPoint.x);
+    }
+
+    public int height(Point targetPoint) {
+        return Math.abs(this.y - targetPoint.y);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -22,13 +30,5 @@ public class Point {
     @Override
     public int hashCode() {
         return Objects.hash(x, y);
-    }
-
-    public int width(Point pointB) {
-        return Math.abs(this.x - pointB.x);
-    }
-
-    public int height(Point pointB) {
-        return Math.abs(this.y - pointB.y);
     }
 }

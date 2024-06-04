@@ -15,7 +15,7 @@ public class RectangleTest {
     private Point pointC;
 
     @BeforeEach
-    void setUp(){
+    void setUp() {
         pointA = new Point(10, 10);
         pointB = new Point(22, 10);
         pointC = new Point(22, 18);
@@ -23,7 +23,7 @@ public class RectangleTest {
 
     @Test
     @DisplayName("특수문자가 제거된 리스트를 point 객체로 바꾸는 기능")
-    void 특수문자제거_point객체로변경(){
+    void 특수문자제거_point객체로변경() {
         List<Integer> inputs = Arrays.asList(10, 10, 22, 10, 22, 18, 10, 18);
         List<Point> points = Arrays.asList(new Point(10, 10), new Point(22, 10), new Point(22, 18), new Point(10, 18));
 
@@ -33,15 +33,13 @@ public class RectangleTest {
 
     @Test
     @DisplayName("width 구하는 기능")
-    void getWidth(){
+    void getWidth() {
         assertThat(pointA.width(pointB)).isEqualTo(12);
     }
 
     @Test
     @DisplayName("height 구하는 기능")
-    void getHeight(){
+    void getHeight() {
         assertThat(pointB.height(pointC)).isEqualTo(8);
     }
-
-
 }
