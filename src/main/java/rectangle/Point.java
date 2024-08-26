@@ -19,6 +19,7 @@ public class Point {
         return Math.abs(this.y - targetPoint.y);
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -10,6 +10,11 @@ repositories {
 }
 
 dependencies {
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.12' // 테스트 의존성 추가
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.12' // 테스트 의존성 추가
     testImplementation "org.junit.jupiter:junit-jupiter:5.7.2"
     testImplementation "org.assertj:assertj-core:3.19.0"
 }
